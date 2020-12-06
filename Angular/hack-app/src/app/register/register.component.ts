@@ -11,8 +11,8 @@ import {
 
 @Component({
   selector: 'app-forms-page',
-  templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss'],
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class FormsComponent implements OnInit {
