@@ -7,8 +7,8 @@ from rest_framework import exceptions
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['title', 'category', 'description','date', 'latitude', 'longitude', 'collector_username',
-         'student_username', 'city', 'state', 'cover_img']
+        fields = ['title', 'category', 'description','date', 'latitude', 'longitude', 'collector',
+         'student', 'city', 'state', 'cover_img']
 
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
