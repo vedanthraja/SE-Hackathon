@@ -36,32 +36,32 @@ def project_list(request):
     #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# @api_view(['GET', 'PUT', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE'])
 # @authentication_classes([TokenAuthentication])
 # @permission_classes([IsAuthenticated])
-# def article_detail(request, pk):
-#     """
-#     Retrieve, update or delete article.
-#     """
-#     try:
-#         article = Article.objects.get(pk=pk)
-#     except Article.DoesNotExist:
-#         return Response(status=status.HTTP_400_BAD_REQUEST)
+def Project_details(request, pk):
+    """
+    Retrieve, update or delete article.
+    """
+    try:
+        project = Project.objects.get(pk=pk)
+    except Project.DoesNotExist:
+        return Response(status=status.HTTP_400_BAD_REQUEST)
  
-#     if request.method == 'GET':  
-#         serializer = ArticleSerializer(article)
-#         return Response(serializer.data)
+    if request.method == 'GET':  
+        serializer = ProjectSerializer(project)
+        return Response(serializer.data)
  
-#     elif request.method == 'PUT':  #Update
-#         serializer = ArticleSerializer(article, data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_UPDATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # elif request.method == 'PUT':  #Update
+    #     serializer = ProjectSerializer(project, data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_UPDATED)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
  
-#     elif request.method == 'DELETE':
-#         article.delete()
-#         return HttpResponse(status=status.HTTP_204_NO_CONTENT)
+    # elif request.method == 'DELETE':
+    #     article.delete()
+    #     return HttpResponse(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['POST'])
 def login(request):
