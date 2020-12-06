@@ -12,10 +12,10 @@ import {
 @Component({
   selector: 'app-forms-page',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class FormsComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   userDetailsForm: FormGroup;
   accountDetailsForm: FormGroup;

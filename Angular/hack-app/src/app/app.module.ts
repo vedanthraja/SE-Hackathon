@@ -8,19 +8,16 @@ import {
   MatCardModule , MatIconModule , MatProgressSpinnerModule , MatDialogModule,
     MatDividerModule
 } from '@angular/material';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-import 'hammerjs';
-
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {ProjectsService} from './services/projects.service';
 
@@ -40,13 +37,17 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     RegisterValidationComponent,
+    RegisterComponent
 
   ],
   imports: [
-    
+
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule , MatCheckboxModule , MatDatepickerModule , MatFormFieldModule ,
     MatInputModule , MatRadioModule , MatSelectModule , MatSliderModule ,
     MatSlideToggleModule , MatToolbarModule , MatListModule , MatGridListModule ,
