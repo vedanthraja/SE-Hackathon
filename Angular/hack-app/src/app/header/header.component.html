@@ -1,20 +1,5 @@
-<!--<mat-toolbar fxLayout="row" color="primary">
-    <span fxFlex>Toolbar </span>
-    <button mat-button *ngFor="let item of menuItems" fxHide.xs>
-        <mat-icon class="mr">{{item.icon}}</mat-icon>
-        {{item.label}}
-    </button>
-    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
-        <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #dropMenu="matMenu">
-        <ng-container *ngFor="let item of menuItems">
-            <button mat-menu-item>
-                <mat-icon class="mr">{{item.icon}}</mat-icon>
-                {{item.label}}
-            </button>
-            <mat-divider></mat-divider>
-        </ng-container>
-    </mat-menu>
-</mat-toolbar>-->
-<p>works</p>
+<mat-nav-list>
+      <a mat-list-item routerLink="/home">First Page</a>
+      <a mat-list-item  routerLink="/projects">Projects</a>
+      <a mat-list-item  routerLink="/">Third Page</a>
+    </mat-nav-list>

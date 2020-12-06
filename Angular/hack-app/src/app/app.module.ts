@@ -10,7 +10,7 @@ import {
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
@@ -21,9 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {ProjectsService} from './services/projects.service';
 
+import {FlexLayoutModule} from '@angular/flex-layout'
 
-import { RegisterComponent } from './register/register.component';
-import { RegisterValidationComponent } from './register-validation/register-validation.component';
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -35,16 +34,14 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent,
-    RegisterValidationComponent,
-    RegisterComponent
+
 
   ],
   imports: [
-
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule,
+    RouterModule.forRoot([]),
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

@@ -10,13 +10,11 @@ export class ProjectsService {
   constructor(private http: HttpClient) { }
 
 
-  private baseUrl = 'http://127.0.0.1:8000/home/';
+  private baseUrl = 'http://127.0.0.1:8000/home';
 
 
 
-  /*getProject(id: number): Observable<object width="300" height="150"> {
-    return this.http.get(`${this.baseUrl}/${id}`);
-  }*/
+
 
   createProject(project: Object): Observable<object> {
     return this.http.post(`${this.baseUrl}/`, project);
