@@ -5,7 +5,8 @@ import {
   MatButtonModule , MatCheckboxModule , MatDatepickerModule , MatFormFieldModule ,
   MatInputModule , MatRadioModule , MatSelectModule , MatSliderModule ,
   MatSlideToggleModule , MatToolbarModule , MatListModule , MatGridListModule ,
-  MatCardModule , MatIconModule , MatProgressSpinnerModule , MatDialogModule
+  MatCardModule , MatIconModule , MatProgressSpinnerModule , MatDialogModule,
+    MatDividerModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -19,8 +20,13 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {ProjectsService} from './services/projects.service';
+
+
 import { RegisterComponent } from './register/register.component';
 import { RegisterValidationComponent } from './register-validation/register-validation.component';
+
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,10 +38,12 @@ import { RegisterValidationComponent } from './register-validation/register-vali
     RegisterComponent,
     RegisterValidationComponent,
     RegisterComponent
-    
+
   ],
   imports: [
+
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -44,7 +52,9 @@ import { RegisterValidationComponent } from './register-validation/register-vali
     MatInputModule , MatRadioModule , MatSelectModule , MatSliderModule ,
     MatSlideToggleModule , MatToolbarModule , MatListModule , MatGridListModule ,
     MatCardModule , MatIconModule , MatProgressSpinnerModule , MatDialogModule,
-    FormsModule, ReactiveFormsModule
+    MatDividerModule,
+    FlexLayoutModule,
+    HttpClientModule,
   ],
   providers: [ProjectsService],
   entryComponents: [
@@ -53,4 +63,3 @@ import { RegisterValidationComponent } from './register-validation/register-vali
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
