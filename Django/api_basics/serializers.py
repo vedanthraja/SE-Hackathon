@@ -1,13 +1,14 @@
 from rest_framework import serializers
-from .models import Article
+from .models import Project
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from rest_framework import exceptions
 
-class ArticleSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Article
-        fields = ['id', 'title', 'author']
+        model = Project
+        fields = ['title', 'category', 'description','date', 'latitude', 'longitude', 'collector_username',
+         'student_username', 'city', 'state', 'cover_img']
 
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
